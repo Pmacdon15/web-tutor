@@ -7,6 +7,7 @@ import { formSchema } from '../zod/contact-form-schema'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function sendEmail(values: z.infer<typeof formSchema>) {
+	
 	const validatedFields = formSchema.safeParse({
 		name: values.name,
 		email: values.email,

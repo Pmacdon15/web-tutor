@@ -1,7 +1,7 @@
 'use client'
-
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import type { z } from 'zod'
 import { Button } from '@/components/ui/button'
 import {
@@ -19,7 +19,24 @@ import { Input } from '../input'
 import { Textarea } from '../textarea'
 
 export function ContactForm() {
-	const { mutate } = useSendMessage()
+	const { mutate } = useSendMessage({
+		onSuccess: () => {
+			toast.success('Email Sent', {
+				description:
+					"Your message has been sent to Pat's Web Dev Tutors!",
+			})
+			form.reset()
+		},
+		onError: (error) => {
+			toast.error('Error Sending Email', {
+				description:
+					error instanceof Error
+						? error.message
+						: 'An error occurred while sending your message.',
+			})
+		},
+	})
+
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
@@ -30,7 +47,6 @@ export function ContactForm() {
 	})
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		console.log(values)
-
 		mutate(values)
 	}
 
@@ -93,7 +109,11 @@ export function ContactForm() {
 							</FormItem>
 						)}
 					/>
-					<Button type="submit">Submit</Button>
+					<Button						
+						type="submit"
+					>
+						Submit
+					</Button>
 				</form>
 			</Form>
 		</div>
