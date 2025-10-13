@@ -21,7 +21,7 @@ export async function sendEmail(values: z.infer<typeof formSchema>) {
 	}
 
 	const { data, error } = await resend.emails.send({
-		from: 'Acme <onboarding@resend.dev>',
+		from: 'Contact Form <contact@resend.dev>',
 		to: ['pmacdonald15@gmail.com'],
 		subject: 'Contact Form Filled Out',
 		react: EmailTemplate({
