@@ -38,7 +38,7 @@ export default function ContentSection({
 	)
 
 	return (
-		<div className="w-full md:w-4/6 text-white bg-black/40 p-6 rounded-lg backdrop-blur-sm shadow-2xl mb-8">
+		<div className="w-full md:w-4/6 text-foreground bg-black/40 p-6 rounded-lg backdrop-blur-sm shadow-2xl mb-8">
 			<div
 				className={`flex flex-col ${imagePosition === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}
 			>

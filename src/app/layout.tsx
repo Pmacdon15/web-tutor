@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist_Mono, Inter } from 'next/font/google'
 import './globals.css'
+import { Providers } from '@/components/providers'
 import Footer from '@/components/ui/footer/footer'
 import LayoutHeader from '@/components/ui/headers/layout-header'
 
@@ -30,7 +31,7 @@ export default function RootLayout({
 				className={`${inter.variable} ${geistMono.variable} antialiased`}
 			>
 				<LayoutHeader />
-				{children}
+				<Providers>{children}</Providers>
 				<Footer />
 			</body>
 		</html>
