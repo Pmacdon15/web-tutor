@@ -15,10 +15,11 @@ import {
 } from '@/components/ui/form'
 import { Input } from '../input'
 
-
 // ✅ 1️⃣ Define schema
 const formSchema = z.object({
-	username: z.string().min(2, 'Must be at least 2 characters').max(50),
+	name: z.string().min(2).max(25),
+	email: z.email().min(3, 'Must be at least 3 characters').max(50),
+	message: z.string().min(5).max(300),
 })
 
 // ✅ 2️⃣ Component
@@ -26,30 +27,62 @@ export function ContactForm() {
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
-			username: '',
+			name: '',
+			email: '',
+			message: '',
 		},
-	}) 
+	})
 
-	
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		console.log(values)
 	}
 
-	
 	return (
 		<Form {...form}>
 			<form className="space-y-8" onSubmit={form.handleSubmit(onSubmit)}>
 				<FormField
 					control={form.control}
-					name="username"
+					name="name"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Username</FormLabel>
+							<FormLabel>Name</FormLabel>
 							<FormControl>
-								<Input placeholder="shadcn" {...field} />
+								<Input placeholder="Name" {...field} />
 							</FormControl>
 							<FormDescription>
-								This is your public display name.
+								This is your name.
+							</FormDescription>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="email"
+					render={({ field }) => (
+						<FormItem>
+							<FormLabel>Name</FormLabel>
+							<FormControl>
+								<Input placeholder="Email" {...field} />
+							</FormControl>
+							<FormDescription>
+								This is your email.
+							</FormDescription>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="message"
+					render={({ field }) => (
+						<FormItem>
+							<FormLabel>Name</FormLabel>
+							<FormControl>
+								<Input placeholder="Message" {...field} />
+							</FormControl>
+							<FormDescription>
+								This is your email.
 							</FormDescription>
 							<FormMessage />
 						</FormItem>
