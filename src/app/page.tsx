@@ -1,4 +1,5 @@
 import ContentSection from '@/components/ui/content/content-section'
+import { ContactForm } from '@/components/ui/forms/contact-form'
 import HeroContainer from '@/components/ui/hero/hero-container'
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
 					title="Expertise & Passion"
 				/>
 			</div>
+			<ContactForm />
 		</div>
 	)
 }

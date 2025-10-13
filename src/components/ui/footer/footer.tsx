@@ -21,10 +21,11 @@ export default function Footer() {
 						</li>
 						<li>
 							<FooterLink
-								href="https://patchat.ca"
-								text="patchat.ca"
+								href="https://yournextsite.ca"
+								text="yournextsite.ca"
 							/>
 						</li>
+
 						<li>
 							<FooterLink
 								href="https://patspretrips.ca"
@@ -36,6 +37,12 @@ export default function Footer() {
 				<div className="text-center">
 					<h3 className="font-bold mb-4">Projects</h3>
 					<ul>
+						<li>
+							<FooterLink
+								href="https://patchat.ca"
+								text="patchat.ca"
+							/>
+						</li>
 						<li>
 							<FooterLink
 								href="https://clockout.patmac.ca"
