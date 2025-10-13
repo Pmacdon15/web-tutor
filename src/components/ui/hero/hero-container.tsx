@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 export default function HeroContainer() {
 	return (
-		<div className="relative flex items-center justify-center p-4 overflow-hidden">
+		<div className="relative flex items-center  w-full md:w-5/6 justify-center p-4 overflow-hidden">
 			{/* Background image container */}
-			<div className="relative w-full md:w-4/6 border-4 border-white rounded-lg shadow-lg overflow-hidden">
+			<div className="relative border-4 w-full border-white rounded-lg shadow-lg overflow-hidden">
 				<Image
 					alt="Background Image"
 					className="w-full h-auto rounded-md shadow-xl object-cover"
