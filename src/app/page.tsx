@@ -22,7 +22,7 @@ export default function Home() {
 					title="Expertise & Passion"
 				/>
 			</div>
-						<div className="flex flex-col items-center justify-center p-4 w-full">
+			<div className="flex flex-col items-center justify-center p-4 w-full">
 				<ContactForm />
 			</div>
 		</div>

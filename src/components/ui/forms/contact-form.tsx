@@ -39,7 +39,7 @@ export function ContactForm() {
 	}
 
 	return (
-		<div className="flex flex-col gap-4 w-full md:w-3/6 text-foreground bg-black/40 p-6 rounded-lg backdrop-blur-sm shadow-2xl mb-8">
+		<div className="flex flex-col gap-4 w-full md:w-3/6 text-foreground bg-black/40 p-6 rounded-lg backdrop-blur-sm shadow-2xl mb-8 border-4">
 			<h1 className='text-3xl'>Contact Me</h1>
             <Form {...form}>
 				<form
