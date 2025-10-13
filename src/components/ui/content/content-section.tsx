@@ -8,7 +8,13 @@ interface ContentSectionProps {
 	imagePosition: 'left' | 'right'
 }
 
-export default function ContentSection({ title, text1, text2, imageUrl, imagePosition }: ContentSectionProps) {
+export default function ContentSection({
+	title,
+	text1,
+	text2,
+	imageUrl,
+	imagePosition,
+}: ContentSectionProps) {
 	const imageContainer = (
 		<div className="w-full md:w-1/2 p-4">
 			<div className="relative w-full border-4 border-white rounded-lg shadow-lg overflow-hidden">
@@ -33,7 +39,9 @@ export default function ContentSection({ title, text1, text2, imageUrl, imagePos
 
 	return (
 		<div className="w-full md:w-4/6 text-white bg-black/40 p-6 rounded-lg backdrop-blur-sm shadow-2xl mb-8">
-			<div className={`flex flex-col ${imagePosition === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}>
+			<div
+				className={`flex flex-col ${imagePosition === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}
+			>
 				{imageContainer}
 				{textContainer}
 			</div>
