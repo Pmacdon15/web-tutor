@@ -1,10 +1,11 @@
+'use client'
 import { useMutation } from '@tanstack/react-query'
-import { sendMessage } from '../Dal/resend'
+import { sendEmail } from '../actions/resend'
 
 export const useSendMessage = () => {
 	return useMutation({
-		mutationFn: () => {
-			return sendMessage()
+		mutationFn: (formData: FormData) => {
+			return sendEmail(formData)
 		},
 		onSuccess: () => {
 			// handle success
