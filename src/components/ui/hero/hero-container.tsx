@@ -23,7 +23,7 @@ export default function HeroContainer() {
 					transition={{
 						repeat: Infinity,
 						repeatType: 'mirror',
-						duration: 25, // slower & smooth (60 seconds)
+						duration: 22, // slower & smooth (60 seconds)
 						ease: 'linear', // ✅ constant speed
 					}}
 				>
