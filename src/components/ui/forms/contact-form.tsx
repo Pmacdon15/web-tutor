@@ -103,7 +103,7 @@ export function ContactForm() {
 									/>
 								</FormControl>
 								<FormDescription>
-									This is your email.
+									This is your your message to me.
 								</FormDescription>
 								<FormMessage />
 							</FormItem>
