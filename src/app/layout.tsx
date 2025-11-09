@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { Geist_Mono, Inter } from 'next/font/google'
 import './globals.css'
+import { Toaster } from 'sonner'
 import { Providers } from '@/components/providers'
 import Footer from '@/components/ui/footer/footer'
 import LayoutHeader from '@/components/ui/headers/layout-header'
-import { Toaster } from 'sonner'
 
 const inter = Inter({
 	variable: '--font-inter',
@@ -33,7 +33,7 @@ export default function RootLayout({
 			>
 				<LayoutHeader />
 				<Providers>{children}</Providers>
-				 <Toaster />
+				<Toaster />
 				<Footer />
 			</body>
 		</html>

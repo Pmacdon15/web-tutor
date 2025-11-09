@@ -4,9 +4,9 @@ import HeroContainer from '@/components/ui/hero/hero-container'
 
 export default function Home() {
 	return (
-		<div className="flex flex-col font-sans mt-8 min-h-screen items-center">
+		<div className="mt-8 flex min-h-screen flex-col items-center font-sans">
 			<HeroContainer />
-			<div className="flex flex-col items-center justify-center p-4 w-full">
+			<div className="flex w-full flex-col items-center justify-center p-4">
 				<ContentSection
 					imagePosition="left"
 					imageUrl="/learningFlyer.png"
@@ -22,9 +22,9 @@ export default function Home() {
 					title="Expertise & Passion"
 				/>
 			</div>
-			
-			<div className="flex flex-col items-center justify-center p-4 w-full">
-				<ContactForm/>
+
+			<div className="flex w-full flex-col items-center justify-center p-4">
+				<ContactForm />
 			</div>
 		</div>
 	)

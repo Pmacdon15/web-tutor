@@ -16,11 +16,11 @@ export default function ContentSection({
 	imagePosition,
 }: ContentSectionProps) {
 	const imageContainer = (
-		<div className="w-full md:w-1/2 p-4">
-			<div className="relative w-full border-4 border-white rounded-lg shadow-lg overflow-hidden">
+		<div className="w-full p-4 md:w-1/2">
+			<div className="relative w-full overflow-hidden rounded-lg border-4 border-white shadow-lg">
 				<Image
 					alt="Placeholder Image"
-					className="w-full h-auto rounded-md shadow-xl object-cover"
+					className="h-auto w-full rounded-md object-cover shadow-xl"
 					height={800}
 					src={imageUrl}
 					width={1200}
@@ -30,15 +30,15 @@ export default function ContentSection({
 	)
 
 	const textContainer = (
-		<div className="w-full md:w-1/2 p-4">
-			<h2 className="text-2xl font-bold mb-4">{title}</h2>
+		<div className="w-full p-4 md:w-1/2">
+			<h2 className="mb-4 font-bold text-2xl">{title}</h2>
 			<p className="mb-4">{text1}</p>
 			<p>{text2}</p>
 		</div>
 	)
 
 	return (
-		<div className="w-full md:w-4/6 text-foreground bg-black/40 p-6 rounded-lg backdrop-blur-sm shadow-2xl mb-8">
+		<div className="mb-8 w-full rounded-lg bg-black/40 p-6 text-foreground shadow-2xl backdrop-blur-sm md:w-4/6">
 			<div
 				className={`flex flex-col ${imagePosition === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}
 			>

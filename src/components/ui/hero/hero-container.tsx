@@ -4,12 +4,12 @@ import Image from 'next/image'
 
 export default function HeroContainer() {
 	return (
-		<div className="relative flex items-center  w-full md:w-5/6 justify-center p-4 overflow-hidden">
+		<div className="relative flex w-full items-center justify-center overflow-hidden p-4 md:w-5/6">
 			{/* Background image container */}
-			<div className="relative border-4 w-full border-white rounded-lg shadow-lg overflow-hidden">
+			<div className="relative w-full overflow-hidden rounded-lg border-4 border-white shadow-lg">
 				<Image
 					alt="Background Image"
-					className="w-full h-auto rounded-md shadow-xl object-cover"
+					className="h-auto w-full rounded-md object-cover shadow-xl"
 					height={1200}
 					src="/background.jpg"
 					width={1200}
@@ -27,7 +27,7 @@ export default function HeroContainer() {
 						ease: 'linear', // ✅ constant speed
 					}}
 				>
-					<h1 className="text-3 md:text-2xl font-bold text-white bg-black/40 px-6 py-3 rounded-lg backdrop-blur-sm shadow-2xl text-center tracking-wide">
+					<h1 className="rounded-lg bg-black/40 px-6 py-3 text-center font-bold text-3 text-white tracking-wide shadow-2xl backdrop-blur-sm md:text-2xl">
 						💻 Software Development Tutoring — Learn to Code with
 						Confidence
 					</h1>

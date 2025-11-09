@@ -51,7 +51,7 @@ export function ContactForm() {
 	}
 
 	return (
-		<div className="flex flex-col gap-4 w-full md:w-3/6 text-foreground bg-black/40 p-6 rounded-lg backdrop-blur-sm shadow-2xl mb-8 border-4">
+		<div className="mb-8 flex w-full flex-col gap-4 rounded-lg border-4 bg-black/40 p-6 text-foreground shadow-2xl backdrop-blur-sm md:w-3/6">
 			<h1 className="text-3xl">Contact Me</h1>
 			<Form {...form}>
 				<form
@@ -66,7 +66,7 @@ export function ContactForm() {
 								<FormLabel>Name</FormLabel>
 								<FormControl>
 									<Input placeholder="Name" {...field} />
-								</FormControl>							
+								</FormControl>
 								{/* <FormMessage /> */}
 							</FormItem>
 						)}
@@ -106,15 +106,9 @@ export function ContactForm() {
 							</FormItem>
 						)}
 					/>
-					<Button						
-						type="submit"
-					>
-						Submit
-					</Button>
+					<Button type="submit">Submit</Button>
 				</form>
 			</Form>
 		</div>
 	)
 }
-
-

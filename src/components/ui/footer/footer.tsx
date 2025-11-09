@@ -2,10 +2,10 @@ import FooterLink from './footer-link'
 
 export default function Footer() {
 	return (
-		<footer className="w-full bg-black/40 text-white p-8 mt-auto flex justify-center items-center">
-			<div className="max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+		<footer className="mt-auto flex w-full items-center justify-center bg-black/40 p-8 text-white">
+			<div className="grid max-w-6xl grid-cols-1 justify-items-center gap-8 md:grid-cols-3">
 				<div className="text-center">
-					<h3 className="font-bold mb-4">My Work</h3>
+					<h3 className="mb-4 font-bold">My Work</h3>
 					<ul>
 						<li>
 							<FooterLink
@@ -35,7 +35,7 @@ export default function Footer() {
 					</ul>
 				</div>
 				<div className="text-center">
-					<h3 className="font-bold mb-4">Projects</h3>
+					<h3 className="mb-4 font-bold">Projects</h3>
 					<ul>
 						<li>
 							<FooterLink
@@ -58,7 +58,7 @@ export default function Footer() {
 					</ul>
 				</div>
 				<div className="text-center">
-					<h3 className="font-bold mb-4">Connect</h3>
+					<h3 className="mb-4 font-bold">Connect</h3>
 					<ul>
 						<li>
 							<FooterLink
