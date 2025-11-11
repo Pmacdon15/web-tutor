@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.tutor.patmac.ca
+Host: https://tutor.patmac.ca
 
 # Sitemaps
-Sitemap: https://www.tutor.patmac.ca/sitemap.xml
+Sitemap: https://tutor.patmac.ca/sitemap.xml
