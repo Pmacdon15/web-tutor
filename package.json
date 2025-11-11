@@ -8,7 +8,7 @@
 		"start": "next start",
 		"lint": "biome check --write --unsafe",
 		"format": "biome format --write",
-		"postbuild": "next-sitemap --config next-sitemap.config.cjs"
+		"postbuild": "next-sitemap "
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^5.2.2",
