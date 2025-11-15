@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist_Mono, Inter } from 'next/font/google'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from 'sonner'
 import { Providers } from '@/components/providers'
 import Footer from '@/components/ui/footer/footer'
@@ -32,7 +33,10 @@ export default function RootLayout({
 				className={`${inter.variable} ${geistMono.variable} antialiased`}
 			>
 				<LayoutHeader />
-				<Providers>{children}</Providers>
+				<Providers>
+					{children}
+					<Analytics />
+				</Providers>
 				<Toaster />
 				<Footer />
 			</body>
