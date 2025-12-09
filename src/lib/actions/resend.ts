@@ -28,6 +28,7 @@ export async function sendEmail(values: z.infer<typeof formSchema>) {
 			email: validatedFields.data.email,
 			message: validatedFields.data.message,
 		}),
+		replyTo: validatedFields.data.email
 	})
 
 	console.log('Result: ', data)
